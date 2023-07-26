@@ -1,4 +1,5 @@
 # CelebVoiceTour
 
 ### ERD
-![image](https://github.com/PSY222/CelebVoiceTour/assets/108808701/030d88c4-3ed1-4c87-be02-fb9f9673a4a5)
+![image](https://github.com/PSY222/CelebVoiceTour/assets/108808701/65cc66bb-e7e8-48f4-aec2-88f5b038c2f3)
+
