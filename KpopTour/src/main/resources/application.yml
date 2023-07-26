@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/test # 네트워크 연결 링크
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create # 애플리케이션 실행 시점에 테이블 drop, 다시 생성
+    properties:
+      hibernate:
+        format_sql: true # 로그로 출력되는 SQL문을 보기쉽게 해준다.
+
+logging.level:
+  org.hibernate.SQL: debug # logger 를 통해 하이버네이트 실행 SQL을 남긴다. (쉽게 말해 만들어진 SQL 문 로그로 출력해줌)
+  org.hibernate.type: trace # 쿼리문 로그에 출력되어 있는 파라미터에 바인딩 되는 값을 확인할 수 있게 로그로 보여준다.
+  # org.hibernate.orm.jdbc.bind: trace # 스프링 부트 3.x 버전
+
+server:
+  port: 8088
