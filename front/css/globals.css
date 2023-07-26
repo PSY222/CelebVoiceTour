@@ -1,0 +1,243 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:700,400");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6407166de475213707b4c4b0.6407166e8f7961daf62ed10a.TXJJqBP.hcp.png");
+
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.frame-3 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.learn-about-korea-with-your-k-pop-star {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  left: 78px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17px;
+  width: 338px;
+}
+
+.image-5 {
+  cursor: pointer;
+  height: 230px;
+  margin-top: 100px;
+  object-fit: cover;
+  transition: all 0.2s linear;
+  width: 244px;
+}
+
+.group-1 {
+  cursor: pointer;
+  height: 230px;
+  margin-left: 3px;
+  opacity: 0;
+  transform: scale(0.9);
+  width: 233px;
+}
+
+.ellipse-1 {
+  background-color: #fffbfb;
+  border-radius: 115.5px/112px;
+  height: 224px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 231px;
+}
+
+.logo_bg-removebg-preview-1 {
+  height: 184px;
+  left: 10px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 211px;
+}
+
+.group-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-right: 15.0px;
+  min-height: 57px;
+  width: 387px;
+}
+
+.frame-4 {
+  gap: 198px;
+}
+
+.frame-1 {
+  flex: 0 0 auto;
+  gap: 16px;
+  justify-content: center;
+}
+
+.image-1 {
+  height: 28px;
+  object-fit: cover;
+  position: relative;
+  width: 29px;
+}
+
+.image {
+  height: 29px;
+  object-fit: cover;
+  position: relative;
+  width: 28px;
+}
+
+.overlap-group1 {
+  height: 278px;
+  margin-right: 19.0px;
+  margin-top: 18px;
+  position: relative;
+  width: 337px;
+}
+
+.rectangle {
+  height: 270px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 333px;
+}
+
+.rectangle-3 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 70px;
+  left: 4px;
+  position: absolute;
+  top: 208px;
+  width: 333px;
+}
+
+.image-7 {
+  height: 42px;
+  left: 257px;
+  object-fit: cover;
+  position: absolute;
+  top: 158px;
+  width: 64px;
+}
+
+.buyeo-jeongrim-saji {
+  color: #236ede;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 218px;
+  width: 192px;
+}
+
+.overlap-group2 {
+  align-self: flex-end;
+  height: 120px;
+  margin-right: -2px;
+  margin-top: 38px;
+  position: relative;
+  width: 395px;
+}
+
+.group-2 {
+  cursor: pointer;
+  height: 110px;
+  left: -6px;
+  position: absolute;
+  top: 10px;
+  width: 357px;
+}
+
+.rectangle-1 {
+  background-color: #d9d9d9;
+  height: 69px;
+  left: 81px;
+  position: absolute;
+  top: 41px;
+  width: 274px;
+}
+
+.rectangle-2 {
+  height: 54px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 355px;
+}
+
+.image-6 {
+  height: 69px;
+  left: 5px;
+  object-fit: cover;
+  position: absolute;
+  top: 41px;
+  width: 63px;
+}
+
+.hi-im-blackpink-jennie {
+  left: 92px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 49px;
+  width: 217px;
+}
+
+.listen-to-the-celebritys-commentary {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 395px;
+}
+
+.frame {
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+}
