@@ -32,6 +32,17 @@
           <img class="line-1" src="/img/line-1-4.svg" alt="Line 1" />
         </div>
         <div class="overlap-group1">
+          <div id="map" style="width:500px;height:400px;"></div>
+          <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06eeb3448ecf68841233caf9dd3221e3"></script>
+          <script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
           <img class="rectangle" src="/img/rectangle-1@2x.png" alt="Rectangle" />
           <div class="rectangle-3"></div>
           <img class="image-7" src="/img/image-7-1@2x.png" alt="image 7" />
