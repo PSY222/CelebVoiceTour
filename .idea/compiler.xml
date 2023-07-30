@@ -11,5 +11,9 @@
         <module name="KpopTour.KpopTour.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="KpopTour.KpopTour.main~1" target="11" />
+      <module name="KpopTour.KpopTour.test~1" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

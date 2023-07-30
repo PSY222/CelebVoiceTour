@@ -1,9 +1,8 @@
 /* screen - audiopage */
-
 .audiopage {
   align-items: flex-start;
   background: linear-gradient(180deg, rgba(254, 214, 79, 0.5) 0%, rgba(170, 101, 253, 0.5) 41.15%, rgba(243, 90, 145, 0.5) 68.75%, rgba(74, 220, 254, 0.5) 97.4%);
-  background-color: rgba(255,255,255,1.0);
+  background-color: rgba(255, 255, 255, 1.0);
   border: 1px none;
   display: flex;
   gap: 17px;
@@ -29,5 +28,32 @@
 }
 
 .audiopage .image-5:hover {
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Playlist style */
+.audiopage .playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.audiopage .playlist-item {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.audiopage .playlist-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.audiopage .playlist-item p {
+  margin-top: 10px;
 }

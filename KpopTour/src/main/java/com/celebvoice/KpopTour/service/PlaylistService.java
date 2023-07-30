@@ -1,0 +1,73 @@
+package com.celebvoice.KpopTour.service;
+
+// SpotifyService.java
+import com.celebvoice.KpopTour.config.SpotifyConfig;
+import com.celebvoice.KpopTour.dto.SpotifyResponseDto;
+import com.celebvoice.KpopTour.dto.SpotifyResponseMapper;
+import com.wrapper.spotify.SpotifyApi;
+import com.wrapper.spotify.exceptions.SpotifyWebApiException;
+import com.wrapper.spotify.model_objects.credentials.ClientCredentials;
+import com.wrapper.spotify.model_objects.specification.AlbumSimplified;
+import com.wrapper.spotify.model_objects.specification.ArtistSimplified;
+import com.wrapper.spotify.model_objects.specification.Image;
+import com.wrapper.spotify.model_objects.specification.Paging;
+import com.wrapper.spotify.model_objects.specification.Track;
+import com.wrapper.spotify.requests.authorization.client_credentials.ClientCredentialsRequest;
+import com.wrapper.spotify.requests.data.search.simplified.SearchTracksRequest;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+@RequiredArgsConstructor
+public class PlaylistService {
+    private final SpotifyApi spotifyApi;
+    private final SpotifyResponseMapper mapper;
+
+
+
+    public List<SpotifyResponseDto> search(String keyword) {
+        List<SpotifyResponseDto> searchResponseDtoList = new ArrayList<>();
+
+        try {
+
+            // SpotifyConfig에서 액세스 토큰을 얻어옴
+            String accessToken = SpotifyConfig.accessToken(spotifyApi);
+
+            // 액세스 토큰을 SpotifyApi에 설정
+            spotifyApi.setAccessToken(accessToken);
+
+            SearchTracksRequest searchTrackRequest = spotifyApi.searchTracks(keyword)
+                    .limit(10)
+                    .build();
+
+            Paging<Track> searchResult = searchTrackRequest.execute();
+            Track[] tracks = searchResult.getItems();
+
+            for (Track track : tracks) {
+                String title = track.getName();
+
+                AlbumSimplified album = track.getAlbum();
+                ArtistSimplified[] artists = album.getArtists();
+                String artistName = artists[0].getName();
+
+                Image[] images = album.getImages();
+                String imageUrl = (images.length > 0) ? images[0].getUrl() : "NO_IMAGE";
+
+                String albumName = album.getName();
+
+                searchResponseDtoList.add(mapper.toSearchDto(artistName, title, albumName, imageUrl));
+            }
+
+        } catch (IOException | SpotifyWebApiException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (org.apache.hc.core5.http.ParseException e) {
+            throw new RuntimeException(e);
+        }
+        return searchResponseDtoList;
+    }
+
+}
