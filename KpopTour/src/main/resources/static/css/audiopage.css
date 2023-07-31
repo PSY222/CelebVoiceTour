@@ -1,12 +1,13 @@
 /* screen - audiopage */
+
 .audiopage {
   align-items: flex-start;
-  background: linear-gradient(180deg, rgba(254, 214, 79, 0.5) 0%, rgba(170, 101, 253, 0.5) 41.15%, rgba(243, 90, 145, 0.5) 68.75%, rgba(74, 220, 254, 0.5) 97.4%);
-  background-color: rgba(255, 255, 255, 1.0);
+  background: linear-gradient(180deg, rgb(147, 122, 56) 0%, rgb(99, 62, 137) 32.81%, rgb(174, 63, 104) 64.58%, rgb(49, 131, 151) 97.4%);
+  background-color: rgba(255,255,255,1.0);
   border: 1px none;
   display: flex;
-  gap: 17px;
-  height: 743px;
+  flex-direction: column;
+  height: 898px;
   padding: 7px 14px;
   width: 430px;
 }
@@ -19,41 +20,186 @@
   width: 55px;
 }
 
-.audiopage .line-1 {
-  height: 8px;
-  left: 4px;
+.audiopage .tour-korea-with-k-pop-star {
+  left: 62px;
+  letter-spacing: 0;
+  line-height: normal;
   position: absolute;
-  top: 52px;
-  width: 395px;
+  top: 20px;
+  width: 282px;
+}
+
+.audiopage .line-1 {
+  left: 8px;
+  top: 56px;
+}
+
+.audiopage .line-2 {
+  left: 9px;
+  top: 368px;
+}
+
+.audiopage .overlap-group {
+  align-self: center;
+  height: 230px;
+  margin-top: 46px;
+  position: relative;
+  width: 244px;
+}
+
+.audiopage .image-5 {
+  cursor: pointer;
+  height: 230px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s linear;
+  width: 244px;
 }
 
 .audiopage .image-5:hover {
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
 }
 
-/* Playlist style */
-.audiopage .playlist {
+.audiopage .vector {
+  cursor: pointer;
+  height: 29px;
+  left: 195px;
+  position: absolute;
+  top: 185px;
+  transition: all 0.1s ease-out;
+  width: 28px;
+}
+
+.audiopage .vector:hover {
+  transform: scale(1.1);
+}
+
+.audiopage .flex-row-2 {
+  height: 479px;
+  margin-left: 14px;
+  margin-top: 67px;
+  min-width: 213px;
+}
+
+.audiopage .flex-col {
+  align-items: flex-start;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 20px;
+  flex-direction: column;
+  min-height: 479px;
+  width: 101px;
 }
 
-.audiopage .playlist-item {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+.audiopage .flex-row-3 {
+  min-width: 101px;
 }
 
-.audiopage .playlist-item img {
-  width: 100%;
-  height: 200px;
+.audiopage .ritriangle-fill {
+  height: 24px;
+  margin-top: 4.0px;
+  width: 24px;
+}
+
+.audiopage .image-1 {
+  height: 60px;
   object-fit: cover;
-  border-radius: 8px;
+  width: 61px;
 }
 
-.audiopage .playlist-item p {
-  margin-top: 10px;
+.audiopage .flex-row {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+  min-width: 100px;
+}
+
+.audiopage .ritriangle-fill-1 {
+  margin-top: 6.0px;
+}
+
+.audiopage .image-1-1 {
+  height: 60px;
+  object-fit: cover;
+  width: 60px;
+}
+
+.audiopage .ritriangle-fill-2 {
+  margin-top: 8.0px;
+}
+
+.audiopage .flex-row-1 {
+  margin-top: 22px;
+  min-width: 101px;
+}
+
+.audiopage .ritriangle-fill-3 {
+  margin-top: 16.0px;
+}
+
+.audiopage .flex-row-4 {
+  margin-top: 25px;
+  min-width: 101px;
+}
+
+.audiopage .flex-col-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.0px;
+  min-height: 462px;
+  width: 96px;
+}
+
+.audiopage .surname {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 6px;
+  min-height: 18px;
+  width: 77px;
+}
+
+.audiopage .pink-venom {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 43px;
+  min-height: 19px;
+  width: 96px;
+}
+
+.audiopage .pink-venom-2 {
+  margin-top: 35px;
+}
+
+.audiopage .pink-venom-3 {
+  margin-top: 44px;
+}
+
+.audiopage .pink-venom-4 {
+  margin-top: 39px;
+}
+
+.audiopage .flex-row-5 {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.audiopage .line {
+  height: 1px;
+  position: absolute;
+  width: 387px;
+}
+
+.audiopage .pink-venom-5 {
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 19px;
+  width: 96px;
+}
+
+.audiopage .ritriangle-fill-4 {
+  height: 24px;
+  width: 24px;
 }

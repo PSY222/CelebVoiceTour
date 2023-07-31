@@ -24,7 +24,6 @@ public class SpotifyConfig {
     }
 
 
-
     public static String accessToken(SpotifyApi spotifyApi) {
         ClientCredentialsRequest clientCredentialsRequest = spotifyApi.clientCredentials().build();
         try {

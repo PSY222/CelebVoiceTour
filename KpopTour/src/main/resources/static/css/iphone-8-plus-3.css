@@ -13,6 +13,20 @@
   width: 430px;
 }
 
+.iphone-8-plus-3 .group-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-right: 15.0px;
+  min-height: 57px;
+  width: 387px;
+}
+
+.iphone-8-plus-3 .frame-4 {
+  gap: 198px;
+}
+
 .iphone-8-plus-3 .logo_bg-removebg-preview-2 {
   height: 48px;
   object-fit: cover;
@@ -20,9 +34,66 @@
   width: 55px;
 }
 
+.iphone-8-plus-3 .image-1 {
+  height: 28px;
+  object-fit: cover;
+  position: relative;
+  width: 29px;
+}
+
 .iphone-8-plus-3 .line-1 {
   height: 1px;
   width: 387px;
+}
+
+.iphone-8-plus-3 .overlap-group1 {
+  height: 278px;
+  margin-right: 19.0px;
+  margin-top: 18px;
+  position: relative;
+  width: 337px;
+}
+
+.iphone-8-plus-3 .rectangle {
+  height: 270px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 333px;
+}
+
+.iphone-8-plus-3 .rectangle-3 {
+  background-color: var(--white-2);
+  border-radius: 10px;
+  height: 70px;
+  left: 4px;
+  position: absolute;
+  top: 208px;
+  width: 333px;
+}
+
+.iphone-8-plus-3 .image-7 {
+  height: 42px;
+  left: 257px;
+  object-fit: cover;
+  position: absolute;
+  top: 158px;
+  width: 64px;
+}
+
+.iphone-8-plus-3 .buyeo-jeongrim-saji {
+  color: #236ede;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 218px;
+  width: 192px;
 }
 
 .iphone-8-plus-3 .text-4 {
@@ -35,8 +106,70 @@
   width: 288px;
 }
 
+.iphone-8-plus-3 .overlap-group2 {
+  align-self: flex-end;
+  height: 120px;
+  margin-right: -2px;
+  margin-top: 38px;
+  position: relative;
+  width: 395px;
+}
+
+.iphone-8-plus-3 .group-2 {
+  cursor: pointer;
+  height: 110px;
+  left: -6px;
+  position: absolute;
+  top: 10px;
+  width: 357px;
+}
+
 .iphone-8-plus-3 .overlap-group {
   height: 110px;
   position: relative;
   width: 355px;
+}
+
+.iphone-8-plus-3 .rectangle-1 {
+  background-color: #d9d9d9;
+  height: 69px;
+  left: 81px;
+  position: absolute;
+  top: 41px;
+  width: 274px;
+}
+
+.iphone-8-plus-3 .rectangle-2 {
+  height: 54px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 355px;
+}
+
+.iphone-8-plus-3 .image-6 {
+  height: 69px;
+  left: 5px;
+  object-fit: cover;
+  position: absolute;
+  top: 41px;
+  width: 63px;
+}
+
+.iphone-8-plus-3 .hi-im-blackpink-jennie {
+  left: 92px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 49px;
+  width: 217px;
+}
+
+.iphone-8-plus-3 .listen-to-the-celebritys-commentary {
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 395px;
 }

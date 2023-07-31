@@ -8,14 +8,14 @@
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="/css/iphone-8-plus-3.css" />
+    <link rel="stylesheet" type="text/css" href="/css/startview.css" />
     <link rel="stylesheet" type="text/css" href="/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="/css/globals.css" />
   </head>
   <body style="margin: 0">
-    <input type="hidden" id="anPageName" name="page" value="iphone-8-plus-3" />
+    <input type="hidden" id="anPageName" name="page" value="startview" />
     <div class="container-center-horizontal">
-      <div class="iphone-8-plus-3 screen">
+      <div class="startview screen">
         <div class="group-3">
           <div class="frame-4 frame">
             <img
@@ -24,83 +24,112 @@
               alt="LOGO_BG-removebg-preview 2"
             />
             <div class="frame-1 frame">
-              <img class="image-1" src="/img/image-1@2x.png" alt="image 1" />
+              <img class="image-1-1" src="/img/image-1@2x.png" alt="image 1" />
               <img class="image" src="/img/image-2@2x.png" alt="image 2" />
               <img class="image" src="/img/image-3@2x.png" alt="image 3" />
             </div>
           </div>
-          <img class="line-1" src="/img/line-1-4.svg" alt="Line 1" />
+          <img class="line-1" src="/img/line-1@2x.png" alt="Line 1" />
         </div>
-        <div class="overlap-group1">
-          <div id="map" style="width:500px;height:400px;"></div>
-          <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06eeb3448ecf68841233caf9dd3221e3"></script>
-          <script>
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
-		};
+        <div class="group-16">
+          <div class="overlap-group-1">
+            <div id="map" style="width:300px;height:200px;"></div>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06eeb3448ecf68841233caf9dd3221e3"></script>
+              <script>
+          var container = document.getElementById('map');
+          var options = {
+              center: new kakao.maps.LatLng(33.450701, 126.570667),
+              level: 3
+          };
 
-		var map = new kakao.maps.Map(container, options);
+          var map = new kakao.maps.Map(container, options);
 
-		//예시적 주소(관광지 title, 위도 경도값 대입 예정)
-		var positions = [
-    {
-        title: '카카오',
-        latlng: new kakao.maps.LatLng(33.450705, 126.570677)
-    },
-    {
-        title: '생태연못',
-        latlng: new kakao.maps.LatLng(33.450936, 126.569477)
-    },
-    {
-        title: '텃밭',
-        latlng: new kakao.maps.LatLng(33.450879, 126.569940)
-    },
-    {
-        title: '근린공원',
-        latlng: new kakao.maps.LatLng(33.451393, 126.570738)
-    }
-];
+          //예시적 주소(관광지 title, 위도 경도값 대입 예정)
+          var positions = [
+      {
+          title: '카카오',
+          latlng: new kakao.maps.LatLng(33.450705, 126.570677)
+      },
+      {
+          title: '생태연못',
+          latlng: new kakao.maps.LatLng(33.450936, 126.569477)
+      },
+      {
+          title: '텃밭',
+          latlng: new kakao.maps.LatLng(33.450879, 126.569940)
+      },
+      {
+          title: '근린공원',
+          latlng: new kakao.maps.LatLng(33.451393, 126.570738)
+      }
+  ];
 
-// 마커 이미지의 이미지 주소
-var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+  // 마커 이미지의 이미지 주소
+  var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
-for (var i = 0; i < positions.length; i ++) {
+  for (var i = 0; i < positions.length; i ++) {
 
-    // 마커 이미지의 이미지 크기
-    var imageSize = new kakao.maps.Size(24, 35);
+      // 마커 이미지의 이미지 크기
+      var imageSize = new kakao.maps.Size(24, 35);
 
-    // 마커 이미지를 생성
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+      // 마커 이미지를 생성
+      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        map: map, // 마커를 표시할 지도
-        position: positions[i].latlng, // 마커를 표시할 위치
-        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시
-        image : markerImage // 마커 이미지
-    });
-}
-	</script>
-          <img class="rectangle" src="/img/rectangle-1@2x.png" alt="Rectangle" />
-          <div class="rectangle-3"></div>
-          <img class="image-7" src="/img/image-7-1@2x.png" alt="image 7" />
-          <div class="buyeo-jeongrim-saji">Buyeo JeongrimSaji</div>
-          <p class="text-4 inter-normal-black-12px">충청남도 부여군 부여읍 동남리 364</p>
+      // 마커를 생성합니다
+      var marker = new kakao.maps.Marker({
+          map: map, // 마커를 표시할 지도
+          position: positions[i].latlng, // 마커를 표시할 위치
+          title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시
+          image : markerImage // 마커 이미지
+      });
+  }
+      </script>
+
+            <div class="rectangle-3"></div>
+            <img class="image-7" src="/img/image-7-2@2x.png" alt="image 7" />
+            <div class="buyeo-jeongrim-saji">Buyeo JeongrimSaji</div>
+            <p class="text-2 inter-normal-black-12px">충청남도 부여군 부여읍 동남리 364</p>
+          </div>
         </div>
-        <div class="overlap-group2">
-          <a href="/kceleb/audio">
-            <div class="group-2">
-              <div class="overlap-group">
-                <div class="rectangle-1"></div>
+        <div class="group-container">
+          <img class="group-4" src="/img/group-4-2@2x.png" alt="Group 4" />
+          <div class="group-15">
+            <a href="/kceleb/audio">
+              <div class="group-10">
                 <img class="rectangle-2" src="/img/rectangle-2@2x.png" alt="Rectangle 2" />
-                <img class="image-6" src="/img/image-6-1@2x.png" alt="image 6" />
-                <p class="hi-im-blackpink-jennie inter-normal-black-12px">Hi I’m BLACKPINK Jennie !</p>
+                <div class="overlap-group1">
+                  <div class="group-19">
+                    <img class="image-1" src="/img/image-6@2x.png" alt="image 6" />
+                    <div class="group">
+                      <div class="overlap-group">
+                        <div class="rectangle-7"></div>
+                        <div class="blackpink-jennie valign-text-middle inter-bold-white-15px-2">BLACKPINK Jennie</div>
+                      </div>
+                    </div>
+                  </div>
+                  <img class="rectangle-2-1" src="/img/rectangle-2@2x.png" alt="Rectangle 2" />
+                </div></div
+            ></a>
+            <div class="group-container-1">
+              <div class="group-12">
+                <img class="image-1" src="/img/image-10@2x.png" alt="image 10" />
+                <div class="group">
+                  <div class="overlap-group">
+                    <div class="rectangle-7"></div>
+                    <div class="bts-rm valign-text-middle inter-bold-white-15px-2">BTS RM</div>
+                  </div>
+                </div>
               </div>
-            </div></a
-          >
-          <p class="listen-to-the-celebritys-commentary">Listen to the celebrity&#39;s commentary!</p>
+              <div class="overlap-group2">
+                <img class="image-8" src="/img/image-8@2x.png" alt="image 8" />
+                <div class="overlap-group-2">
+                  <div class="rectangle-7"></div>
+                  <div class="psy valign-text-middle inter-bold-white-15px-2">PSY</div>
+                </div>
+                <img class="group-2" src="/img/rectangle-2@2x.png" alt="Group 2" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

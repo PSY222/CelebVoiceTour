@@ -2,15 +2,29 @@
 
 .startview {
   align-items: center;
-  background: linear-gradient(180deg, rgba(254, 214, 79, 0.5) 0%, rgba(170, 101, 253, 0.5) 41.15%, rgba(243, 90, 145, 0.5) 68.75%, rgba(74, 220, 254, 0.5) 97.4%);
+  background: linear-gradient(180deg, rgb(150.87, 127.31, 47.78) 0%, rgb(95.68, 57.64, 141.43) 32.81%, rgb(175.31, 62.82, 103.26) 60.42%, rgb(48.41, 131.52, 150.87) 97.4%);
   background-color: rgba(255,255,255,1.0);
   border: 1px none;
   display: flex;
   flex-direction: column;
-  height: 743px;
-  overflow: hidden;
-  padding: 7px 0;
-  width: 430px;
+  height: 736px;
+  padding: 7px 14px;
+  width: 417px;
+}
+
+.startview .group-3 {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  height: 57px;
+  width: 387px;
+}
+
+.startview .frame-4 {
+  gap: 198px;
+  height: 48px;
+  width: 370px;
 }
 
 .startview .logo_bg-removebg-preview-2 {
@@ -20,23 +34,263 @@
   width: 55px;
 }
 
+.startview .image-1-1 {
+  height: 28px;
+  object-fit: cover;
+  position: relative;
+  width: 29px;
+}
+
 .startview .line-1 {
   height: 1px;
   width: 387px;
 }
 
-.startview .text-2 {
-  left: 27px;
+.startview .group-16 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 22px;
+  min-width: 341px;
+}
+
+.startview .overlap-group-1 {
+  height: 291px;
+  position: relative;
+  width: 337px;
+}
+
+.startview .rectangle {
+  height: 283px;
+  left: 7px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 330px;
+}
+
+.startview .rectangle-3 {
+  background-color: var(--white-2);
+  border-radius: 10px;
+  height: 73px;
+  left: 7px;
+  position: absolute;
+  top: 218px;
+  width: 330px;
+}
+
+.startview .image-7 {
+  height: 51px;
+  left: 261px;
+  object-fit: cover;
+  position: absolute;
+  top: 161px;
+  width: 62px;
+}
+
+.startview .buyeo-jeongrim-saji {
+  color: #236ede;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  left: 0;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 238px;
+  text-align: center;
+  top: 239px;
+  width: 188px;
+}
+
+.startview .text-2 {
+  left: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 259px;
   white-space: nowrap;
-  width: 288px;
+  width: 282px;
+}
+
+.startview .group-container {
+  height: 295px;
+  margin-left: 2.0px;
+  margin-top: 21px;
+  position: relative;
+  width: 355px;
+}
+
+.startview .group-4 {
+  height: 37px;
+  left: 6px;
+  position: absolute;
+  top: 0;
+  width: 337px;
+}
+
+.startview .group-15 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  left: 0;
+  min-height: 285px;
+  position: absolute;
+  top: 10px;
+  width: 355px;
+}
+
+.startview .group-10 {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-height: 143px;
+  width: 355px;
+}
+
+.startview .rectangle-2 {
+  height: 54px;
+  width: 355px;
+}
+
+.startview .overlap-group1 {
+  height: 82px;
+  position: relative;
+  width: 355px;
+}
+
+.startview .group-19 {
+  display: flex;
+  gap: 13px;
+  height: 63px;
+  left: 12px;
+  position: absolute;
+  top: 0;
+  width: 330px;
+}
+
+.startview .image-1 {
+  height: 63px;
+  object-fit: cover;
+  width: 63px;
+}
+
+.startview .group {
+  align-items: flex-start;
+  display: flex;
+  min-width: 256px;
 }
 
 .startview .overlap-group {
-  height: 110px;
+  border-radius: 10px;
+  height: 63px;
   position: relative;
+  width: 254px;
+}
+
+.startview .rectangle-7 {
+  background-color: var(--white-3);
+  border-radius: 10px;
+  cursor: pointer;
+  height: 63px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease;
+  width: 254px;
+}
+
+.startview .rectangle-7:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.startview .blackpink-jennie {
+  height: 49px;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  width: 217px;
+}
+
+.startview .rectangle-2-1 {
+  height: 54px;
+  left: 0;
+  position: absolute;
+  top: 28px;
+  width: 355px;
+}
+
+.startview .group-container-1 {
+  height: 141px;
+  position: relative;
+  width: 355px;
+}
+
+.startview .group-12 {
+  display: flex;
+  gap: 13px;
+  height: 63px;
+  left: 13px;
+  position: absolute;
+  top: 78px;
+  width: 330px;
+}
+
+.startview .bts-rm {
+  height: 49px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  width: 217px;
+}
+
+.startview .overlap-group2 {
+  height: 85px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 355px;
+}
+
+.startview .image-8 {
+  height: 63px;
+  left: 13px;
+  position: absolute;
+  top: 0;
+  width: 63px;
+}
+
+.startview .overlap-group-2 {
+  border-radius: 10px;
+  height: 63px;
+  left: 88px;
+  position: absolute;
+  top: 0;
+  width: 254px;
+}
+
+.startview .psy {
+  height: 49px;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  width: 217px;
+}
+
+.startview .group-2 {
+  height: 54px;
+  left: 0;
+  position: absolute;
+  top: 31px;
   width: 355px;
 }

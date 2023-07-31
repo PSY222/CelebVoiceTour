@@ -1,45 +1,31 @@
-/* screen - page1 */
+/* screen - iphone-8-plus-1 */
 
-.page1 {
+.iphone-8-plus-1 {
+  align-items: flex-start;
   background-color: #f35a91;
   border: 1px none;
+  display: flex;
   height: 736px;
-  position: relative;
+  padding: 223px 89px;
   width: 414px;
 }
 
-.page1 .overlap-group1 {
-  height: 242px;
-  left: 92px;
-  position: absolute;
-  top: 211px;
-  width: 231px;
-}
-
-.page1 .group-20 {
-  display: flex;
-  height: 230px;
-  left: 0;
-  position: absolute;
-  top: 12px;
-  width: 231px;
-}
-
-.page1 .group-1 {
+.iphone-8-plus-1 .group-1 {
   cursor: pointer;
   height: 230px;
+  margin-left: 3px;
   opacity: 0;
   transform: scale(0.9);
   width: 233px;
 }
 
-.page1 .group-1.animate-enter {
-  animation: animate-enter-frames 0.30s ease-out 0.00s 1 normal forwards;
+.iphone-8-plus-1 .group-1.animate-enter1 {
+  animation: animate-enter1-frames 0.30s ease-out 0.00s 1 normal forwards;
   opacity: 0;
   transform: scale(0.9);
 }
 
-@keyframes animate-enter-frames {
+@keyframes animate-enter1-frames {
   from{opacity: 0;
 transform: scale(0.9);
 }
@@ -48,28 +34,22 @@ transform: scale(1);
 }
 }
 
-.page1 .overlap-group {
+.iphone-8-plus-1 .overlap-group {
   height: 230px;
   position: relative;
   width: 231px;
 }
 
-.page1 .logo_bg-removebg-preview-1 {
-  cursor: pointer;
+.iphone-8-plus-1 .logo_bg-removebg-preview-1 {
   height: 184px;
   left: 10px;
   object-fit: cover;
   position: absolute;
   top: 0;
-  transition: all 0.2s ease;
   width: 211px;
 }
 
-.page1 .logo_bg-removebg-preview-1:hover {
-  transform: rotate(15deg);
-}
-
-.page1 .text-1 {
+.iphone-8-plus-1 .text-3 {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
   background: conic-gradient(from 180deg at 50% 50%, rgb(74, 220, 254) 0deg, rgb(169, 101, 253) 82.5deg, rgb(243, 90, 145) 161.25deg, rgb(254, 214, 79) 236.25deg, rgb(170, 101, 253) 298.12deg, rgb(74, 221, 253) 360deg);
@@ -84,23 +64,4 @@ transform: scale(1);
   position: absolute;
   text-fill-color: transparent;
   top: 177px;
-}
-
-.page1 .arrow-1 {
-  height: 26px;
-  left: 31px;
-  position: absolute;
-  top: 0;
-  width: 24px;
-}
-
-.page1 .click {
-  left: 48px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 187px;
-  white-space: nowrap;
-  width: 91px;
 }
