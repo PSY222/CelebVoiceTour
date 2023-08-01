@@ -14,7 +14,9 @@ public class PlayList {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private String name;
-    private String song;
+    private String artistName;
+    private String title;
+    private String albumName;
+    private String imageUrl;
 
 }

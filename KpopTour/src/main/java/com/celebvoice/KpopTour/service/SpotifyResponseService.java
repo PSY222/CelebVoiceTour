@@ -6,13 +6,11 @@ import com.celebvoice.KpopTour.dto.SpotifyResponseDto;
 import com.celebvoice.KpopTour.dto.SpotifyResponseMapper;
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
-import com.wrapper.spotify.model_objects.credentials.ClientCredentials;
 import com.wrapper.spotify.model_objects.specification.AlbumSimplified;
 import com.wrapper.spotify.model_objects.specification.ArtistSimplified;
 import com.wrapper.spotify.model_objects.specification.Image;
 import com.wrapper.spotify.model_objects.specification.Paging;
 import com.wrapper.spotify.model_objects.specification.Track;
-import com.wrapper.spotify.requests.authorization.client_credentials.ClientCredentialsRequest;
 import com.wrapper.spotify.requests.data.search.simplified.SearchTracksRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,7 +21,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PlaylistService {
+public class SpotifyResponseService {
     private final SpotifyApi spotifyApi;
     private final SpotifyResponseMapper mapper;
 
@@ -33,7 +31,6 @@ public class PlaylistService {
         List<SpotifyResponseDto> searchResponseDtoList = new ArrayList<>();
 
         try {
-
             // SpotifyConfig에서 액세스 토큰을 얻어옴
             String accessToken = SpotifyConfig.accessToken(spotifyApi);
 
