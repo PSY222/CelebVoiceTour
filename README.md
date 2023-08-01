@@ -7,3 +7,5 @@
 <img width="509" alt="image" src="https://github.com/PSY222/CelebVoiceTour/assets/108808701/301dddd5-92da-476b-a40b-57c35be7bb10">
 
 
+### Audio Page
+<img width="158" alt="image" src="https://github.com/PSY222/CelebVoiceTour/assets/108808701/48ac054b-cb6f-414f-a35f-ab6f457555a5">
