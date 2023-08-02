@@ -11,6 +11,7 @@ import com.wrapper.spotify.model_objects.specification.ArtistSimplified;
 import com.wrapper.spotify.model_objects.specification.Image;
 import com.wrapper.spotify.model_objects.specification.Paging;
 import com.wrapper.spotify.model_objects.specification.Track;
+import com.wrapper.spotify.requests.data.player.StartResumeUsersPlaybackRequest;
 import com.wrapper.spotify.requests.data.search.simplified.SearchTracksRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,6 @@ public class SpotifyResponseService {
     private final SpotifyResponseMapper mapper;
 
 
-
     public List<SpotifyResponseDto> search(String keyword) {
         List<SpotifyResponseDto> searchResponseDtoList = new ArrayList<>();
 
@@ -37,12 +37,20 @@ public class SpotifyResponseService {
             // 액세스 토큰을 SpotifyApi에 설정
             spotifyApi.setAccessToken(accessToken);
 
+            // 해당 가수의 곡 정보를 요청함
             SearchTracksRequest searchTrackRequest = spotifyApi.searchTracks(keyword)
                     .limit(10)
                     .build();
 
+            // 음악 재생을 요청함
+            StartResumeUsersPlaybackRequest startResumeUsersPlaybackRequest = spotifyApi
+                    .startResumeUsersPlayback()
+                    .build();
+
             Paging<Track> searchResult = searchTrackRequest.execute();
             Track[] tracks = searchResult.getItems();
+
+            String string = startResumeUsersPlaybackRequest.execute();
 
             for (Track track : tracks) {
                 String title = track.getName();
@@ -66,5 +74,7 @@ public class SpotifyResponseService {
         }
         return searchResponseDtoList;
     }
+
+
 
 }

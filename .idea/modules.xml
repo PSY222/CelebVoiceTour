@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/KpopTour.iml" filepath="$PROJECT_DIR$/.idea/KpopTour.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/KpopTour.KpopTour.main.iml" filepath="$PROJECT_DIR$/.idea/modules/KpopTour.KpopTour.main.iml" />
     </modules>
   </component>
 </project>
