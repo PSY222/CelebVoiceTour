@@ -29,11 +29,9 @@ public class PlayListController {
     public String search(Model model, @RequestParam("keyword") String keyword) {
 
         List<SpotifyResponseDto> spotifyResponseDtoList = spotifyService.search(keyword);
+
         model.addAttribute(spotifyResponseDtoList);
-//        for(SpotifyResponseDto dto : spotifyResponseDtoList){
-//            logger.info("albumName:" + dto.getAlbumName());
-//            logger.info("artistName:" + dto.getArtistName());
-//        }
+
         return "audioPage";
     }
 

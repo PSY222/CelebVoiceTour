@@ -22,4 +22,9 @@ public class HomeController {
     public String kcelebAudio(){
         return "audioPage";
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "test";
+    }
 }

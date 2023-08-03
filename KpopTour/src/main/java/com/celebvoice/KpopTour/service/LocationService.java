@@ -1,9 +1,9 @@
 package com.celebvoice.KpopTour.service;
 
 import com.celebvoice.KpopTour.domain.Location;
-import com.celebvoice.KpopTour.dto.LocationDTO;
+import com.celebvoice.KpopTour.dto.LocationDto;
 import com.celebvoice.KpopTour.repository.LocationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,27 +11,30 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class LocationService {
+
     private final LocationRepository locationRepository;
 
-    @Autowired
-    public LocationService(LocationRepository locationRepository) {
-        this.locationRepository = locationRepository;
-    }
 
-    public List<LocationDTO> getAllLocations() {
+    public List<LocationDto> getAllLocations() {
         List<Location> locations = locationRepository.findAll();
         return locations.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
     }
 
-    public List<LocationDTO> getCelebByLanguage(String language) {
-        List<Location> locations = locationRepository.findByLanguage(language);
-        return locations.stream().map(this::convertToDTO).collect(Collectors.toList());
+//    public List<LocationDto> getCelebByLanguage(String language) {
+//        List<Location> locations = locationRepository.findByLanguage(language);
+//        return locations.stream().map(this::convertToDTO).collect(Collectors.toList());
+//    }
+
+    public List<Location> getLocationByLanguage(String language){
+        List<Location> locationList = locationRepository.findByLanguage(language);
+        return locationList;
     }
 
-    public LocationDTO getLocationById(Long id) {
+    public LocationDto getLocationById(Long id) {
         Optional<Location> locationOptional = locationRepository.findById(id);
         return locationOptional.map(this::convertToDTO).orElse(null);
     }
@@ -40,8 +43,8 @@ public class LocationService {
     public void deleteLocation(Long id) {
         locationRepository.deleteById(id);
     }
-    private LocationDTO convertToDTO(Location location) {
-        LocationDTO locationDTO = new LocationDTO();
+    private LocationDto convertToDTO(Location location) {
+        LocationDto locationDTO = new LocationDto();
         locationDTO.setId(location.getId());
         locationDTO.setLocation(location.getLocation());
         locationDTO.setLanguage(location.getLanguage());
@@ -53,7 +56,7 @@ public class LocationService {
     }
 
     // Helper method to convert LocationDTO to Location entity
-    private Location convertToEntity(LocationDTO locationDTO) {
+    private Location convertToEntity(LocationDto locationDTO) {
         Location location = new Location();
         location.setId(locationDTO.getId());
         location.setLocation(locationDTO.getLocation());
@@ -64,5 +67,7 @@ public class LocationService {
 
         return location;
     }
+
+
 }
 

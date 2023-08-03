@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class LocationDTO {
+public class LocationDto {
     private Long id;
     private String location;
     private String language;

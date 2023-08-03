@@ -12,14 +12,18 @@ import java.util.List;
 @Setter
 public class Celeb {
     @Id
-    @Column(name = "celeb_id")
+    @Column(name = "celeb_name",nullable = false)
     private String celeb;
 
+
     private String celeb_img;
+
+    private String celeb_group;
 
     @OneToMany(fetch = FetchType.LAZY,
             targetEntity = Location.class,
             mappedBy = "celeb")
+
     private List<Location> locationList = new ArrayList<>();
 
 }

@@ -9,11 +9,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.IOException;
+import java.net.URI;
+import java.util.Arrays;
 
 @Configuration
 public class SpotifyConfig {
-    private static final String CLIENT_ID = "ffe1dd51401046e0ac38ed6e9eac1461";
-    private static final String CLIENT_SECRET = "f3e6cec367514599baf44fb62be22885";
+    private static final String CLIENT_ID = "9867c223b51e46578f2fe5151f4d9d32";
+    private static final String CLIENT_SECRET = "3a33da82b20f48ecafe9630487a2c5d6";
 
     @Bean
     public SpotifyApi spotifyApi() {

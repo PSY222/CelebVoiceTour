@@ -4,6 +4,7 @@ package com.celebvoice.KpopTour.service;
 import com.celebvoice.KpopTour.config.SpotifyConfig;
 import com.celebvoice.KpopTour.dto.SpotifyResponseDto;
 import com.celebvoice.KpopTour.dto.SpotifyResponseMapper;
+import com.google.gson.JsonArray;
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
 import com.wrapper.spotify.model_objects.specification.AlbumSimplified;
@@ -15,6 +16,7 @@ import com.wrapper.spotify.requests.data.player.StartResumeUsersPlaybackRequest;
 import com.wrapper.spotify.requests.data.search.simplified.SearchTracksRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ClassUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -42,18 +44,22 @@ public class SpotifyResponseService {
                     .limit(10)
                     .build();
 
-            // 음악 재생을 요청함
-            StartResumeUsersPlaybackRequest startResumeUsersPlaybackRequest = spotifyApi
-                    .startResumeUsersPlayback()
-                    .build();
+//            // 곡을 재생함
+//            StartResumeUsersPlaybackRequest startResumeUsersPlaybackRequest = spotifyApi
+//                    .startResumeUsersPlayback()
+//                    .build();
+
 
             Paging<Track> searchResult = searchTrackRequest.execute();
             Track[] tracks = searchResult.getItems();
 
-            String string = startResumeUsersPlaybackRequest.execute();
+//            String string = startResumeUsersPlaybackRequest.execute();
+//            ClassUtils.convertResourcePathToClassName(string);
 
             for (Track track : tracks) {
                 String title = track.getName();
+
+                //System.out.println(track.getId());
 
                 AlbumSimplified album = track.getAlbum();
                 ArtistSimplified[] artists = album.getArtists();
@@ -74,7 +80,6 @@ public class SpotifyResponseService {
         }
         return searchResponseDtoList;
     }
-
 
 
 }

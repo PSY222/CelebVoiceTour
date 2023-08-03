@@ -21,7 +21,7 @@ public class Location {
     @ManyToOne
             (fetch = FetchType.LAZY,
                     targetEntity = Celeb.class)
-    @JoinColumn(name = "celeb_id")
+    @JoinColumn(name = "celeb_name")
     private Celeb celeb;
 
     @Lob //audio file path
