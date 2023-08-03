@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
     <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
@@ -32,39 +32,40 @@
           <img class="line-1" src="/img/line-1@2x.png" alt="Line 1" />
         </div>
         <div class="group-16">
+
           <div class="overlap-group-1">
+            <p id="result">LET'S CLICK A MAP !</p>
             <div id="map" style="width:330px;height:250px;"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06eeb3448ecf68841233caf9dd3221e3"></script>
               <script>
           var container = document.getElementById('map');
           var options = {
-              center: new kakao.maps.LatLng(37.5766785, 126.9779074),
+              center: new kakao.maps.LatLng(37.57345683398591, 126.98785357491813 ),
               level: 5
           };
 
           var map = new kakao.maps.Map(container, options);
 
-          //예시적 주소(관광지 title, 위도 경도값 대입 예정)
           var positions = [
       {
-          title: '조계사 일주문',
-          latlng: new kakao.maps.LatLng(37.5766785, 126.9779074)
+          title: 'Illjumun, the One-Pillar Gate, of Jogyesa ',
+          latlng: new kakao.maps.LatLng(37.57388865505386, 126.98260662640993 )
       },
       {
-          title: '생태연못',
+          title: 'Yukuijeon',
           latlng: new kakao.maps.LatLng(33.450936, 126.569477)
       },
       {
-          title: '텃밭',
-          latlng: new kakao.maps.LatLng(33.450879, 126.569940)
+          title: 'Insa-dong',
+          latlng: new kakao.maps.LatLng(37.570892, 126.986233)
       },
       {
-          title: '근린공원',
-          latlng: new kakao.maps.LatLng(33.451393, 126.570738)
+          title: 'Jeongjeon',
+          latlng: new kakao.maps.LatLng(37.574778, 126.993972)
       }
   ];
 
-            // 마커 이미지의 이미지 주소
+             // 마커 이미지의 이미지 주소
             var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
 
             for (var i = 0; i < positions.length; i ++) {
@@ -76,29 +77,35 @@
                 var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 
                 // 마커를 생성합니다
-                var marker = new kakao.maps.Marker({
-                    map: map, // 마커를 표시할 지도
-                    position: positions[i].latlng, // 마커를 표시할 위치
-                    title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시
-                    image : markerImage // 마커 이미지
+                 if (i == 0) {
+                      var marker = new kakao.maps.Marker({
+                        position: positions[i].latlng,
+                        title: positions[i].title,
+                        image: markerImage
+                      });
+                 } else {
+                      var marker = new kakao.maps.Marker({
+                        map: map, // 마커를 표시할 지도
+                        position: positions[i].latlng, // 마커를 표시할 위치
+                        title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시
+                      });
+                    }
+                    //각 마커에 클릭 함수 달아주기
+                    kakao.maps.event.addListener(marker, 'click', function() {
+                        // Get the title of the clicked marker
+                        var title = this.getTitle();
 
-                });
+                        // Display the title in the resultDiv
+                        var resultDiv = document.getElementById('result');
+                        resultDiv.innerHTML = title;
 
-                var zoomControl = new kakao.maps.ZoomControl();
-          map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+                        // Log the title to the console
+                        console.log('Clicked Marker Title:', title);
+                      });
+                   marker.setMap(map);
+                };
 
-          // 지도가 확대 또는 축소되면 마지막 파라미터로 넘어온 함수를 호출하도록 이벤트를 등록합니다
-          kakao.maps.event.addListener(map, 'zoom_changed', function() {
 
-              // 지도의 현재 레벨을 얻어옵니다
-              var level = map.getLevel();
-
-              var message = '현재 지도 레벨은 ' + level + ' 입니다';
-              var resultDiv = document.getElementById('result');
-              resultDiv.innerHTML = message;
-
-          });
-            }
       </script>
 
 <!--            <div class="rectangle-3"> </div>-->
@@ -112,7 +119,7 @@
           <div class="group-15">
               <div class="group-10">
                 <img class="rectangle-2" src="/img/rectangle-2@2x.png" alt="Rectangle 2" />
-                <script src="singers.js"></script> <!--connect with singer list file-->
+<!--               <div id="dynamic-group"></div>        -->
                 <div class="overlap-group1">
                   <div class="group-19">
                     <img class="image-1" src="/img/image-6@2x.png" alt="image 6" />
@@ -127,7 +134,24 @@
                   </div>
                   <img class="rectangle-2-1" src="/img/rectangle-2@2x.png" alt="Rectangle 2" />
                 </div></div>
-<!--            <div class="group-container-1">-->
+            <!-- Assuming you have already retrieved the locations by language and stored it in a variable called 'locations' -->
+            <div th:each="location : ${locations}">
+              <!-- Display the image based on the language -->
+              <img th:src="${location.language == 'eng' ? '/img/image-1@2x.png' : (location.language == 'cm' ? '/img/image-2@2x.png' : '/img/image-3@2x.png')}"
+                   alt="image" />
+
+              <!-- Display the celeb information from the 'LocationDTO' -->
+              <div class="group">
+                <div class="overlap-group">
+                  <div class="rectangle-7"></div>
+                  <a th:href="@{'/kceleb/search?keyword=' + ${location.celeb}}">
+                    <div th:text="${location.celeb}" class="blackpink-jennie valign-text-middle inter-bold-white-15px-2"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!--            <div class="group-container-1">-->
 <!--              <div class="group-12">-->
 <!--                <img class="image-1" src="/img/image-10@2x.png" alt="image 10" />-->
 <!--                <div class="group">-->

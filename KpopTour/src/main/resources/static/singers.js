@@ -1,7 +1,7 @@
-// Function to fetch the data from the server
-async function fetchDataFromDB() {
+// Function to fetch the data from the server based on the given identifier (a, b, or c)
+async function fetchDataFromDB(identifier) {
   try {
-    const response = await fetch('http://localhost:8088'); // Replace with your API endpoint, h2???
+    const response = await fetch(`/api/get-data?identifier=${identifier}`);
     if (!response.ok) {
       throw new Error('Network response was not ok.');
     }
@@ -14,8 +14,8 @@ async function fetchDataFromDB() {
 }
 
 // Function to create the div groups with the retrieved data
-async function createDivGroupsFromDB() {
-  const data = await fetchDataFromDB();
+async function createDivGroupsFromDB(identifier) {
+  const data = await fetchDataFromDB(identifier);
   const parentDiv = document.getElementById('dynamic-group');
 
   data.forEach((item) => {
@@ -55,5 +55,10 @@ async function createDivGroupsFromDB() {
   });
 }
 
-// Call the function to create div groups from the database data
-createDivGroupsFromDB();
+// Event listeners for the image elements
+document.querySelector('.image-1').addEventListener('click', () => createDivGroupsFromDB('eng'));
+document.querySelector('.image-2').addEventListener('click', () => createDivGroupsFromDB('jap'));
+document.querySelector('.image-3').addEventListener('click', () => createDivGroupsFromDB('ch'));
+
+// Initial call to createDivGroupsFromDB with a default identifier (you can modify as needed)
+createDivGroupsFromDB('a');

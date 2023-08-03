@@ -12,9 +12,8 @@ import java.util.List;
 @Setter
 public class Celeb {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "celeb_id")
-    private Long id;
+    private String celeb;
 
     private String celeb_img;
 

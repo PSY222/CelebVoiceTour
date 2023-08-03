@@ -160,6 +160,26 @@
   width: 355px;
 }
 
+/* CSS for the <p id="result"></p> element */
+#result {
+  font-family: Lucid Sans;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  width: 330px;
+  height: 30px;
+  margin: 10px;
+  padding: 2px;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide any overflowed text */
+  text-overflow: ellipsis; /* Show "..." at the end if text overflows */
+}
+
+
+
 .startview .group-19 {
   display: flex;
   gap: 13px;
