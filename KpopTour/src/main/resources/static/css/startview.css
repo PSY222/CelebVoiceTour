@@ -114,15 +114,16 @@
 .startview .group-container {
   height: 295px;
   margin-left: 2.0px;
-  margin-top: 21px;
+  margin-top: 20px;
   position: relative;
   width: 355px;
 }
 
 .startview .group-4 {
+  margin-bottom: 15px;
   height: 37px;
   left: 6px;
-  position: absolute;
+  position: relative;
   top: 0;
   width: 337px;
 }

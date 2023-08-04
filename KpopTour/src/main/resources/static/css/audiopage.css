@@ -36,6 +36,8 @@
 .audiopage .line-2 {
   left: 9px;
   top: 368px;
+  margin-bottom: 10px;
+  position: absolute;
 }
 
 .audiopage .overlap-group {
@@ -77,7 +79,7 @@
 
 .audiopage .flex-row-2 {
   margin-left: 14px;
-  margin-top: 67px;
+  margin-top: 37px;
   min-width: 213px;
 }
 
@@ -162,7 +164,6 @@
   line-height: normal;
   margin-top: 43px;
   min-height: 19px;
-  width: 96px;
 }
 
 .audiopage .pink-venom-2 {
@@ -193,7 +194,7 @@
   letter-spacing: 0;
   line-height: normal;
   min-height: 19px;
-  width: 96px;
+  width: 120px;
 }
 
 .audiopage .ritriangle-fill-4 {
