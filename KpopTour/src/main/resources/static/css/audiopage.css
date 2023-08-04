@@ -11,6 +11,19 @@
   width: 430px;
 }
 
+ #audioPlayer {
+    width: 240px;
+    height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    top: 230px;
+    bottom:20px;
+  }
+
+  #audioPlayer::-webkit-media-controls-panel {
+    background-color: transparent !important;
+  }
+
 .audiopage .logo_bg-removebg-preview-2 {
   cursor: pointer;
   height: 48px;
@@ -50,7 +63,7 @@
 
 .audiopage .image-5 {
   cursor: pointer;
-  height: 230px;
+  height: 225px;
   left: 0;
   object-fit: cover;
   position: absolute;
@@ -101,9 +114,9 @@
 }
 
 .audiopage .image-1 {
-  height: 60px;
+  height: 56px;
   object-fit: cover;
-  width: 61px;
+  width: 56px;
 }
 
 .audiopage .flex-row {

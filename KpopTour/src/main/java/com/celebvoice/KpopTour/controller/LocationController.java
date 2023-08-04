@@ -50,6 +50,4 @@ public class LocationController {
 //        return locationService.getLocationById(id);
 //    }
 
-
-
 }

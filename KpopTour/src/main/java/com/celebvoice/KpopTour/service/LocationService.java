@@ -17,11 +17,9 @@ public class LocationService {
     private final LocationRepository locationRepository;
 
 
-    public List<LocationDto> getAllLocations() {
+    public List<Location> getAllLocations() {
         List<Location> locations = locationRepository.findAll();
-        return locations.stream()
-                .map(this::convertToDTO)
-                .collect(Collectors.toList());
+        return locations;
     }
 
 //    public List<LocationDto> getCelebByLanguage(String language) {

@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface CelebRepository extends JpaRepository<Celeb,String> {
 
-
     Optional<Celeb> findById(String celebName);
+
 
 }

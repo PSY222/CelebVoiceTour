@@ -37,6 +37,8 @@
 
           <div class="overlap-group-1">
             <p id="result">LET'S CLICK A MAP !</p>
+            <!--임시 버튼-->
+            <button onclick="redirectToNextPage()"> Next</button>
             <div id="map" style="width:330px;height:250px;"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06eeb3448ecf68841233caf9dd3221e3"></script>
               <script>
@@ -115,44 +117,29 @@
           <img class="group-4" src="/img/group-4-2@2x.png" alt="Group 4" />
           <div class="overlap-group1" th:each="celeb : ${celebList}">
             <!-- 'celeb'이 Optional이 비어있지 않다면(Celeb 객체가 존재한다면) -->
-            <div class="group-19" >
+            <!--celeb_group을 celeb_name으로 바꿔야함-->
+            <div class="group-19" th:loc="${celeb.get().celeb_group}" th:onclick="selectCelebGroup(this.getAttribute('loc'))" >
               <img class="image-1" th:src="${celeb.get().celeb_img}" alt="image 6" />
               <div class="group"  >
                 <div class="overlap-group">
                   <div class="rectangle-7"></div>
-                  <a th:href="@{/kceleb/search(keyword=${celeb.get().celeb_group})}">
                     <div class="blackpink-jennie valign-text-middle inter-bold-white-15px-2" th:text="${celeb.get().celeb}"></div>
-                  </a>
                 </div>
               </div>
             </div>
-            <img class="rectangle-2-1" src="/img/rectangle-2@2x.png" alt="Rectangle 2" />
+            <img class="rectangle-2-1" src="/img/rectangle-2@2x.png" alt="Rectangle 2"/>
           </div>
-              </div>
-            <!-- Assuming you have already retrieved the locations by language and stored it in a variable called 'locations' -->
-            <div th:each="location : ${locationList}">
-              <!-- Display the image based on the language -->
-              <img th:src="${location.language == 'eng' ? '/img/image-1@2x.png' : (location.language == 'cm' ? '/img/image-2@2x.png' : '/img/image-3@2x.png')}"
-                   alt="image" />
-
-              <!-- Display the celeb information from the 'LocationDTO' -->
-              <div class="group">
-                <div class="overlap-group">
-                  <div class="rectangle-7"></div>
-                  <a th:href="@{'/kceleb/search?keyword=' + ${location.celeb}}">
-
-                    <div th:text="${location.celeb}" class="blackpink-jennie valign-text-middle inter-bold-white-15px-2"></div>
-                  </a>
-                </div>
-              </div>
-            </div>
+        </div>
 
           </div>
         </div>
-      </div>
-    </div>
     <script>
+    let selectedCelebGroup = null;
+    let resultText = null;
+    let selectedLanguage= 'eng';
+
     function changeLanguage(language) {
+        selectedLanguage = language;
         // AJAX 요청 보내기
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "/kceleb/" + language, true);
@@ -168,6 +155,26 @@
 
         xhr.send();
     }
-</script>
+
+    function selectCelebGroup(element) {
+        selectedCelebGroup = element;
+        console.log(selectedCelebGroup);
+        return selectedCelebGroup;
+    }
+
+<!--&& selectedCelebGroup-->
+     function redirectToNextPage() {
+        const resultDiv = document.getElementById("result");
+        resultText = resultDiv.textContent.trim();
+        if (resultText === "LET'S CLICK A MAP !") {
+              alert("Please choose a location.");
+          } else if (selectedCelebGroup === null) {
+              alert("Please choose a celeb group.");
+          }  else {
+               const url = `/kceleb/search?keyword=${selectedCelebGroup}&language=${selectedLanguage}&location=${encodeURIComponent(resultText)}`;
+                window.location.href = url;
+            }
+    }
+      </script>
   </body>
 </html>
