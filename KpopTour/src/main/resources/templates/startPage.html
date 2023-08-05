@@ -167,7 +167,9 @@
               alert("Please choose a location.");
           } else if (selectedCelebGroup === null) {
               alert("Please choose a celebrity.");
-          }  else {
+          } else if ((resultText === 'Insa-dong') || resultText === 'Jeongjeon'){
+            alert("This location is not in service yet :( ")
+          }else {
                const url = `/kceleb/search?keyword=${selectedCelebGroup}&language=${selectedLanguage}&location=${encodeURIComponent(resultText)}`;
                 window.location.href = url;
             }
