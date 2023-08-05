@@ -44,10 +44,5 @@ public class LocationController {
         model.addAttribute("celebList",celebList);
         return "startPage";
     }
-//
-//    @GetMapping("/{id}")
-//    public LocationDto getLocationById(@PathVariable Long id) {
-//        return locationService.getLocationById(id);
-//    }
 
 }
