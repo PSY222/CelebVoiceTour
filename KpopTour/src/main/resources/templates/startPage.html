@@ -37,8 +37,6 @@
 
           <div class="overlap-group-1">
             <p id="result">LET'S CLICK A MAP !</p>
-            <!--임시 버튼-->
-            <button onclick="redirectToNextPage()"> Next</button>
             <div id="map" style="width:330px;height:250px;"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=06eeb3448ecf68841233caf9dd3221e3"></script>
               <script>
@@ -114,6 +112,7 @@
           </div>
         </div>
         <div class="group-container">
+          <button class="spotty-button" onclick="redirectToNextPage()">NEXT</button>
           <img class="group-4" src="/img/group-4-2@2x.png" alt="Group 4" />
           <div class="overlap-group1" th:each="celeb : ${celebList}">
             <!-- 'celeb'이 Optional이 비어있지 않다면(Celeb 객체가 존재한다면) -->
@@ -130,9 +129,8 @@
             <img class="rectangle-2-1" src="/img/rectangle-2@2x.png" alt="Rectangle 2"/>
           </div>
         </div>
-
-          </div>
-        </div>
+      </div>
+    </div>
     <script>
     let selectedCelebGroup = null;
     let resultText = null;
@@ -162,14 +160,13 @@
         return selectedCelebGroup;
     }
 
-<!--&& selectedCelebGroup-->
      function redirectToNextPage() {
         const resultDiv = document.getElementById("result");
         resultText = resultDiv.textContent.trim();
         if (resultText === "LET'S CLICK A MAP !") {
               alert("Please choose a location.");
           } else if (selectedCelebGroup === null) {
-              alert("Please choose a celeb group.");
+              alert("Please choose a celebrity.");
           }  else {
                const url = `/kceleb/search?keyword=${selectedCelebGroup}&language=${selectedLanguage}&location=${encodeURIComponent(resultText)}`;
                 window.location.href = url;

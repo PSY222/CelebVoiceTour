@@ -7,7 +7,7 @@
   border: 1px none;
   display: flex;
   flex-direction: column;
-  height: 736px;
+  min-height: 100vh;
   padding: 7px 14px;
   width: 417px;
 }
@@ -40,6 +40,10 @@
   position: relative;
   width: 29px;
 }
+
+.startview .image-1-1:hover {
+    filter: brightness(1.5);
+  }
 
 .startview .line-1 {
   height: 1px;
@@ -85,20 +89,6 @@
   position: absolute;
   top: 161px;
   width: 62px;
-}
-
-.startview .buyeo-jeongrim-saji {
-  color: #236ede;
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-l);
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 239px;
-  width: 188px;
 }
 
 .startview .text-2 {
@@ -163,11 +153,12 @@
 
 /* CSS for the <p id="result"></p> element */
 #result {
-  font-family: Lucid Sans;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   font-size: 20px;
   font-weight: bolder;
   text-align: center;
+  text-transform:uppercase;
   color: white;
   padding: 5px;
   width: 330px;
@@ -179,7 +170,27 @@
   text-overflow: ellipsis; /* Show "..." at the end if text overflows */
 }
 
+.spotty-button {
+    background-color: #ff66b2;
+    height: 20px;
+    width: 50ox;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+  }
 
+  .spotty-button:hover {
+    background-color: pink;
+  }
 
 .startview .group-19 {
   display: flex;
@@ -223,7 +234,7 @@
 }
 
 .startview .rectangle-7:hover {
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 2px #ff66b2;
 }
 
 .startview .blackpink-jennie {

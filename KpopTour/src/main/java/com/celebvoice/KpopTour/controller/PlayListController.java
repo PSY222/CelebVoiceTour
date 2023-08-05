@@ -39,7 +39,7 @@ public class PlayListController {
         String celebAudio = null;
 
         for (Location loc : celeb.get().getLocationList()) {
-            if (loc.getCeleb().equals(keyword) && loc.getLanguage().equals(language) && loc.getLocation().equals(location)) {
+            if (loc.getCeleb().getCeleb().equals(keyword) && loc.getLanguage().equals(language) && loc.getLocation().equals(location)) {
                 celebAudio = loc.getAudio();
                 break;
             }else{
