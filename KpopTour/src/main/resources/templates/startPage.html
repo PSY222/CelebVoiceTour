@@ -117,12 +117,12 @@
           <div class="overlap-group1" th:each="celeb : ${celebList}">
             <!-- 'celeb'이 Optional이 비어있지 않다면(Celeb 객체가 존재한다면) -->
             <!--celeb_group을 celeb_name으로 바꿔야함-->
-            <div class="group-19" th:loc="${celeb.get().celeb_group}" th:onclick="selectCelebGroup(this.getAttribute('loc'))" >
+            <div class="group-19" th:loc="${celeb.get().celeb}" th:onclick="selectCelebGroup(this.getAttribute('loc'))" >
               <img class="image-1" th:src="${celeb.get().celeb_img}" alt="image 6" />
               <div class="group"  >
                 <div class="overlap-group">
                   <div class="rectangle-7"></div>
-                    <div class="blackpink-jennie valign-text-middle inter-bold-white-15px-2" th:text="${celeb.get().celeb}"></div>
+                    <div class="blackpink-jennie valign-text-middle inter-bold-white-15px-2" th:text="${celeb.get().celeb_group}"></div>
                 </div>
               </div>
             </div>

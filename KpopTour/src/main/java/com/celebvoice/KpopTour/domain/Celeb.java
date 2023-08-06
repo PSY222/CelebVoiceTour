@@ -15,6 +15,7 @@ public class Celeb {
     @Column(name = "celeb_name",nullable = false)
     private String celeb;
 
+    private String previewUrl;
 
     private String celeb_img;
 

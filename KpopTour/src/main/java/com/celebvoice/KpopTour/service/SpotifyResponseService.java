@@ -41,7 +41,7 @@ public class SpotifyResponseService {
 
             // 해당 가수의 곡 정보를 요청함
             SearchTracksRequest searchTrackRequest = spotifyApi.searchTracks(keyword)
-                    .limit(10)
+                    .limit(7)
                     .build();
 
 //            // 곡을 재생함
@@ -59,18 +59,19 @@ public class SpotifyResponseService {
             for (Track track : tracks) {
                 String title = track.getName();
 
-                //System.out.println(track.getId());
+
 
                 AlbumSimplified album = track.getAlbum();
                 ArtistSimplified[] artists = album.getArtists();
                 String artistName = artists[0].getName();
+                String previewUrl = track.getPreviewUrl();
 
                 Image[] images = album.getImages();
                 String imageUrl = (images.length > 0) ? images[0].getUrl() : "NO_IMAGE";
 
                 String albumName = album.getName();
 
-                searchResponseDtoList.add(mapper.toSearchDto(artistName, title, albumName, imageUrl));
+                searchResponseDtoList.add(mapper.toSearchDto(artistName, title, albumName, imageUrl,previewUrl));
             }
 
         } catch (IOException | SpotifyWebApiException e) {
