@@ -216,6 +216,10 @@
 }
 
 
-.audio-container {
+.ready-player-1 {
   display: none;
+}
+
+#player{
+    width: 280px;
 }
