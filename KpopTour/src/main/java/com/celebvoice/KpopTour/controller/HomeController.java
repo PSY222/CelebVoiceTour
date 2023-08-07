@@ -35,15 +35,5 @@ public class HomeController {
     }
 
 
-    @GetMapping("/test")
-    public String test(){
-        return "multiple-instance";
-    }
-
-    @GetMapping("/test2")
-    public String test2(){
-        return "single-instance";
-    }
-
 
 }

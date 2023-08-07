@@ -18,6 +18,7 @@
     position: absolute;
     top: 230px;
     bottom:20px;
+
   }
 
   #audioPlayer::-webkit-media-controls-panel {
@@ -213,6 +214,7 @@
 .audiopage .ritriangle-fill-4 {
   height: 24px;
   width: 24px;
+  background: transparent;
 }
 
 

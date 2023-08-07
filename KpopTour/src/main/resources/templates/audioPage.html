@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="/css/green-audio-player.css">
     <link rel="stylesheet" type="text/css" href="/css/globals.css" />
+    <link rel="stylesheet" type="text/css" href="/css/green-audio-player.css">
 
   </head>
   <body style="margin: 0">
@@ -38,8 +39,16 @@
           <!-- Add a clickable icon for play/pause functionality -->
             <audio id="audioPlayer" controls style="background: transparent;">
                 <source th:src="${selectedAudio}" type="audio/mpeg">
-                Your browser does not support the audio element.
             </audio>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  const playerContainers = document.querySelectorAll('.ready-player-1');
+                  playerContainers.forEach(function(container) {
+                    new GreenAudioPlayer(container, { showTooltips: true, showDownloadButton: false, enableKeystrokes: true });
+                  });
+                });
+            </script>
+
         </div>
 
         <div class="flex-row-2 flex-row-5" th:if="${spotifyResponseDtoList}" th:each="dto: ${spotifyResponseDtoList}">
@@ -47,15 +56,15 @@
             <div class="flex-row-3 flex-row-5">
                 <img class="ritriangle-fill" src="/img/ri-triangle-fill@2x.png" alt="ri:triangle-fill" onclick="toggleAudio(event)" />
                 <img class="image-1" th:src="${dto.imageUrl}" />
-                <div class="ready-player-1" >
-                    <audio id="player" controls style="background: transparent;" crossorigin preload="none">
+                <div class="ready-player-1"  >
+                    <audio  crossorigin preload="none">
                         <source th:src="${dto.previewUrl}" type="audio/mpeg">
                     </audio>
                     <script>
                           function toggleAudio(event) {
                             const audioContainer = event.target.closest('.flex-row-5').querySelector('.ready-player-1');
                             if (audioContainer.style.display === 'none') {
-                              audioContainer.style.display = 'block';
+                              audioContainer.style.display = 'flex';
                             } else {
                               audioContainer.style.display = 'none';
                             }
@@ -69,7 +78,6 @@
         </div>
       </div>
     </div>
-
-
+   <script src="/js/green-audio-player.js"></script>
   </body>
 </html>
