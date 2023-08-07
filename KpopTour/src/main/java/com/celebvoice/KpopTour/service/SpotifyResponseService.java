@@ -41,7 +41,7 @@ public class SpotifyResponseService {
 
             // 해당 가수의 곡 정보를 요청함
             SearchTracksRequest searchTrackRequest = spotifyApi.searchTracks(keyword)
-                    .limit(7)
+                    .limit(5)
                     .build();
 
 //            // 곡을 재생함

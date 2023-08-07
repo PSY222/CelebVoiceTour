@@ -18,7 +18,7 @@
     position: absolute;
     top: 230px;
     bottom:20px;
-
+    background: linear-gradient(90deg, rgb(147, 122, 56,0) 0%, rgb(99, 62, 137,0) 32.81%, rgb(174, 63, 104,0) 64.58%, rgb(49, 131, 151,0) 97.4%);
   }
 
   #audioPlayer::-webkit-media-controls-panel {

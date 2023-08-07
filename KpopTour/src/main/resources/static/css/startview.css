@@ -326,3 +326,9 @@
   top: 31px;
   width: 355px;
 }
+
+
+.empty-message img {
+  width: 340px; /* Set the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}

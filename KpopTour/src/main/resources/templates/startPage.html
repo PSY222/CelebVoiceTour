@@ -118,8 +118,6 @@
           <button class="spotty-button" onclick="redirectToNextPage()">NEXT</button>
           <img class="group-4" src="/img/group-4-2@2x.png" alt="Group 4" />
           <div class="overlap-group1" th:each="celeb : ${celebList}">
-            <!-- 'celeb'이 Optional이 비어있지 않다면(Celeb 객체가 존재한다면) -->
-            <!--celeb_group을 celeb_name으로 바꿔야함-->
             <div class="group-19" th:loc="${celeb.get().celeb}" th:onclick="selectCelebGroup(this.getAttribute('loc'))" >
               <img class="image-1" th:src="${celeb.get().celeb_img}" alt="image 6" />
               <div class="group"  >
@@ -130,6 +128,9 @@
               </div>
             </div>
             <img class="rectangle-2-1" src="/img/rectangle-2@2x.png" alt="Rectangle 2"/>
+          </div>
+          <div class="empty-message" th:if="${celebList.empty}">
+            <img src="/img/wip_yellow.png" alt="Work in progress" />
           </div>
         </div>
       </div>

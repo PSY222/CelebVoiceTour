@@ -20,7 +20,7 @@
     <div class="container-center-horizontal">
       <div class="audiopage screen">
         <div class="frame-3">
-          <a href="/kceleb">
+            <a th:href="@{/kceleb/{lang} (lang=${selectedLanguage})}">
             <img
               class="logo_bg-removebg-preview-2"
               src="/img/logo-bg-removebg-preview-2@2x.png"
@@ -29,15 +29,12 @@
           </a>
           <p class="tour-korea-with-k-pop-star inter-bold-white-20px">Tour Korea with K-POP star</p>
           <img class="line-1 line" src="/img/line-1@2x.png" alt="Line 1" />
-<!--          <img class="line-2 line" src="/img/line-1@2x.png" alt="Line 2" />-->
+
         </div>
 
         <div class="overlap-group">
-<!--          <img class="image-5" src="/img/image-5@2x.png" alt="image 5" />-->
             <img class="image-5" th:src="${celebImage}" alt="image 5" />
-
-          <!-- Add a clickable icon for play/pause functionality -->
-            <audio id="audioPlayer" controls style="background: transparent;">
+            <audio id="audioPlayer" controls>
                 <source th:src="${selectedAudio}" type="audio/mpeg">
             </audio>
             <script>
@@ -48,9 +45,7 @@
                   });
                 });
             </script>
-
         </div>
-
         <div class="flex-row-2 flex-row-5" th:if="${spotifyResponseDtoList}" th:each="dto: ${spotifyResponseDtoList}">
           <div class="flex-col">
             <div class="flex-row-3 flex-row-5">

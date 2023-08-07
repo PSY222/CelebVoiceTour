@@ -19,6 +19,11 @@
   font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height:40px;
+  max-width: 100%;
 }
 
 .inter-bold-white-12px {
