@@ -24,7 +24,7 @@ The Bark model consists of three transformer models designed to convert text int
 
 This service utilized voice cloning based on the incredible work from [Serp-Ai](https://huggingface.co/suno/bark). K-POP celebrity's voice was extracted from YouTube video and adjusted noise using Audacity. I transformed K-POP Celebrity's audio file to semantic token using HuBERT model and tokenizer. Then, I went through numerous experiments of generating custom voice by processing pre-generated voice with target celebrity's npz token.
 
-I shared ['VITS_model_with Whisper tutorial'](https://github.com/PSY222/CelebVoiceTour/blob/main/Tutorial_3_VITS_model_with_Whisper) for anyone who wants to try customized voice cloning using VITS model with Whisper.
+I shared ['VITS_model_with Whisper tutorial'](https://github.com/PSY222/CelebVoiceTour/blob/main/Tutorial_3_VITS_model_with_Whisper.ipynb) for anyone who wants to try customized voice cloning using VITS model with Whisper.
 
 Refer to this [article](https://www.linkedin.com/pulse/ai-voice-cloning-bark-hubert-practical-guide-felix-leber%3FtrackingId=gMIlVvyXRR2OfBRzSRU1fg%253D%253D/?trackingId=gMIlVvyXRR2OfBRzSRU1fg%3D%3D) for more step-by-step approach.
 
